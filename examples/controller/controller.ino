@@ -192,6 +192,11 @@ void loop(void)
     Serial.print(green, HEX);
     if (blue < 0x10) Serial.print("0");
     Serial.println(blue, HEX);
+
+    analogWrite(3, 255-green);
+    analogWrite(5, 255-blue);
+    analogWrite(6, 255-red);
+    
   }
 
   // Buttons
