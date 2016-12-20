@@ -15,7 +15,7 @@
 #include <string.h>
 #include <Arduino.h>
 #include <SPI.h>
-#if not defined (_VARIANT_ARDUINO_DUE_X_) && not defined (_VARIANT_ARDUINO_ZERO_)
+#if not defined (_VARIANT_ARDUINO_DUE_X_) && not defined (_VARIANT_ARDUINO_ZERO_) && not defined (_VARIANT_FREEDOM_E300_)
   #include <SoftwareSerial.h>
 #endif
 
@@ -192,6 +192,11 @@ void loop(void)
     Serial.print(green, HEX);
     if (blue < 0x10) Serial.print("0");
     Serial.println(blue, HEX);
+
+    analogWrite(3, 255-green);
+    analogWrite(5, 255-blue);
+    analogWrite(6, 255-red);
+    
   }
 
   // Buttons

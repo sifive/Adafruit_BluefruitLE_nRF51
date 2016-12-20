@@ -1,7 +1,7 @@
 #include <string.h>
 #include <Arduino.h>
 #include <SPI.h>
-#if not defined (_VARIANT_ARDUINO_DUE_X_) && not defined (_VARIANT_ARDUINO_ZERO_)
+#if not defined (_VARIANT_ARDUINO_DUE_X_) && not defined (_VARIANT_ARDUINO_ZERO_) && not defined (_VARIANT_FREEDOM_E300_)
   #include <SoftwareSerial.h>
 #endif
 
